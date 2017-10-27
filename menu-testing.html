@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>JAJANANKU</title>
+    <!-- Bootstrap core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/parallax.css" rel="stylesheet">
+    <link href="styles/carousel-main.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--    <link href="styles/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!--    <script src="js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+
+    <link href="styles/myproject.css" rel="stylesheet">
+
+      <style>
+          @font-face {
+            font-family: 'Slabo 27px', serif;
+              font-family: 'Pacifico', cursive;
+               font-family: 'Playfair Display', serif;
+              font-family: 'El Messiri', sans-serif;
+              font-family: 'Lobster', cursive;
+          font-family: 'Alegreya Sans', sans-serif;
+  src: url("fonts/Slabo_27px/Slabo27px-Regular.ttf"),
+      url("fonts/Playfair_Display/PlayfairDisplay-Regular.ttf"),
+      url("fonts/Pacifico/Pacifico-Regular.ttf"),
+      url("fonts/Lobster/Lobster-Regular.ttf"),
+      url("fonts/El_Messiri/ElMessiri-Regular.ttf"),
+      url("fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf");
+          
+  font-weight: bold;
+}
+          body{
+              font-family: 'Slabo 27px', serif;
+              color: white;
+              width: 100%;
+          }
+          #logo {         
+              font-size: 24px;
+              font-family: 'Pacifico', cursive;
+              padding-left: 30px;
+          }
+/*          navbar-nav {
+              position: fixed;
+          }*/
+          h2 {
+               font-family: 'Playfair Display', serif;
+          }
+          h3 {
+              font-family: 'El Messiri', sans-serif;
+          }
+          h4 {
+              font-family: 'Lobster', cursive;
+              color: saddlebrown;
+          }   
+          h5 {
+          font-family: 'Alegreya Sans', sans-serif;
+          }
+          .row {
+              margin-bottom: 30px;
+              padding-left: 50px;
+              padding-right: 50px;
+          }
+          .menuspesial {
+              margin-top: 40px;
+              margin-bottom: 40px;
+          }
+          .menu-images p {
+              font-size: 20px;
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              bottom: 10px;
+              left: 0;
+          }
+          .drop-shadow {
+              margin-top: 50px;
+              width: 300px;
+              height: 400 px;
+              padding: 50px;
+              background-color: whitesmoke;
+              color: saddlebrown;
+          }
+        .col-lg-2 a {
+              text-decoration: none;
+          }
+/*Start Filter Box*/
+        .filter h4,
+        .filter a,
+        .margin-none {
+            margin: 0 !important;
+        }
+/*End Filter Box*/
+        .pull-right {
+            position: : fixed;
+            height: 100%;
+        }
+        .row {
+            text-align: center;
+  
+            }
+            
+          }
+.container {
+	position: relative;
+	perspective: 1000;	
+	margin: 0 auto;	
+}
+		
+.container:hover .circle {
+	transform: rotate3d(45, 45, 0, 180deg);
+}
+		
+.container:hover .outer-ring {
+	transform: rotate3d(45, 0, 0, 180deg);
+}
+
+.container:hover .outer-outer-ring {
+	transform: rotate3d(0, 45, 0, 180deg);
+}
+		
+.circle-container, .front, .back {
+	width: 175px;
+	height: 175px;
+	background-color: rgba(0,0,0,0);
+}
+		
+.circle, .outer-ring, .outer-outer-ring {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+		
+.circle {
+	position: relative;
+	width: 175px;
+	height: 175px;
+}
+		
+.front, .back {
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+		
+.front {
+	background-color: #fff;
+	z-index: 2;
+}
+		
+.front p {
+	margin-top: 1.2em;
+	font-family: cabin, sans-serif;
+	font-weight: 700;
+	font-size: 3em;
+	text-align: center;
+	color: #c02227;
+}
+		
+.back {
+	transform: rotate3d(45,45,0,180deg);
+	background-color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+.outer-ring {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 191px;
+	height: 191px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+.outer-outer-ring {
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 211px;
+	height: 211px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+</style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/rotate3di.js"></script>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+$(document).ready(function () {
+$('#nav-list-example li div.back').hide().css('left', 0);
+function mySideChange(front) {
+if (front) {
+$(this).parent().find('div.front').show();
+$(this).parent().find('div.back').hide();
+} else {
+$(this).parent().find('div.front').hide();
+$(this).parent().find('div.back').show();
+}
+}
+$('#nav-list-example li').hover(
+function () {
+$(this).find('div').stop().rotate3Di('flip', 250, {direction: 'clockwise', sideChange: mySideChange});
+},
+function () {
+$(this).find('div').stop().rotate3Di('unflip', 500, {sideChange: mySideChange});
+}
+);
+});
+</script>
+  </head>
+<!-- NAVBAR
+================================================== -->
+ <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header background-color=#63501a">
+          <a id="logo" class="navbar-brand" href="ogut.html">O'gut Corner</a>
+        </div>
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <a href="tentangkita.html">TENTANG KITA</a>
+                </li>
+                <li>
+                    <a href="menu.html">MENU</a>
+                </li>
+                <li>
+                    <a href="galeri.html">GALERI</a>
+                </li>
+                <li>
+                    <a href="artikel.html">ARTIKEL</a>
+                </li>
+                <li>
+                    <a href="kontak.html">KONTAK KAMI</a>
+                </li>
+          </ul>
+        </div>
+     </nav>
+     <div class="row">
+        <div class="col-xs-12 text-center">
+            <img class="img-circle" src="images/kue-lumpur.jpg" width="100px" height="100px">
+            <img class="img-circle" src="images/kue-mangkok-gula-merah.jpg" width="100px" height="100px">
+            <img class="img-circle" src="images/bolu-pandan.jpg" width="100px" height="100px">
+            <img class="img-circle" src="images/kue-putri-mandi.jpg" width="100px" height="100px">
+            <img class="img-circle" src="images/onde.jpg" width="100px" height="100px">
+            <img class="img-circle" src="images/cucur.jpg" width="100px" height="100px">
+            </div>
+        </div> 
+     <div class="bgimg-1">
+        <div class="caption">
+            <a href="kontak.html"><span class="border">Yuk Order</span></a>
+        </div>
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="menuspesial">
+                 <div class="col-lg-6">
+                     <a href="menuspesial.html" onclick="menuspesial">
+                         <div class="menuspesial-image"><img src="images/cucur.jpg" width="650" height="400"></div>
+                     </a>
+                 </div>
+                 <div class="col-lg-2">
+                     <a href="menuspesial.html" class="thumbnail-link">
+                         <div class="oguts-pick--textbox drop-shadow">
+                             <h4>Menu Spesial Minggu Ini</h4>
+                             <h5>Bolu Spesial, cocok untuk Arisan, Pesta Ulang Tahun maupun rapat kantor atau reunian.
+                             </h5>                    
+                             <p class="cta-link">
+                                 <span class="icon-arrowright"></span> <span class="cta-link--text">Read more</span>
+                             </p>
+                         </div>
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div style="color:#fff; background-color:antiquewhite;text-align:center;padding:30px 150px;text-align: justify;">
+         <h1 style="text-align:center; color:saddlebrown; font-family: cursive; margin:40px;">Menu</h1>
+        <div class="container">
+            <div class="col-xs-9">
+                <div class="row">
+            <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <a href="#"><img class="img-circle" src="../OgutCorner/images/kue-lumpur.jpg"></a></div>
+    </div>
+    <div class="back">
+      <h4>Kue Cucur</h4>
+        <h5> Kue cucur terbuat dari gula merah dan tepung terigu</h5>
+    </div>
+  </div>
+            </div>
+             <div class="col-xs-3">
+            <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+        <h3>Kue Cucur</h3>
+    </div>
+  </div>
+</div>
+                </div>
+                                <div class="row">
+            <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+  </div>
+            </div>
+             <div class="col-xs-3">
+            <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+        <h3>Kue Cucur</h3>
+    </div>
+  </div>
+</div>
+                </div>                <div class="row">
+            <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+  </div>
+            </div>
+             <div class="col-xs-3">
+            <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+        <h3>Kue Cucur</h3>
+    </div>
+  </div>
+</div>
+                </div>                <div class="row">
+            <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+  </div>
+            </div>
+             <div class="col-xs-3">
+            <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+      <img class="back-logo" src="//theelevationgroup.com/img/logo.svg" alt="The Elevation Group Logo" />
+    </div>
+                 </div>
+            </div>
+                  <div class="col-xs-3">
+  <div class="outer-ring"></div>
+  <!-- Used for more of a gyroscope type effect
+	<div class="outer-outer-ring"></div>
+	-->
+  <div class="circle">
+    <div class="front">
+      <p>START</p>
+    </div>
+    <div class="back">
+        <h3>Kue Cucur</h3>
+    </div>
+  </div>
+</div>
+                </div>
+     </div>
+  
+     <div class="col-xs-3">
+         <h2>what</h2>
+     </div>
+     </div>
+   
+     <!-- FOOTER -->
+     <!-- FOOTER -->
+     <footer>
+         <h4 class="pull-right"><a href="#">Back to top</a></h4>
+         <h4><a href="ogut.html">&copy; Ogut Corner</a> &middot;<a href="kontakkami.html">Kontak Kami</a> &middot; </h4>
+     </footer>
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--    <script src="js/jquery.min.js"></script>-->
+    <script>window.jQuery || document.write('js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

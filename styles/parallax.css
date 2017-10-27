@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    color: cornsilk;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.6;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgimg-1 {
+    background-image:url(../images/kueputu.jpg);
+    min-height: 60%;
+}
+.bgimg-2 {
+    background-image: url(../images/onde.jpg);
+    min-height: 350px;
+}
+.bgimg-3 {
+    background-image: url(../images/kueputu.jpg);
+    min-height: 400px;
+}
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: burlywood;
+}
+.caption a {
+    text-decoration: none;
+}
+.caption span.border {
+    background-color: transparent;
+    color: saddlebrown;
+    padding: 22px;
+    font-size: 35px;
+    font-weight: 1200;
+    letter-spacing: 10px;
+    font-family: cursive;
+}
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: rosybrown;
+}
